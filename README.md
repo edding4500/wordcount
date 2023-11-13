@@ -1,6 +1,6 @@
 # WordCount
 
-An overly complicated version of word count in Java, with the goal to make use of as many methodologies, patterns and technologies as possible.
+An overly complicated version of word count in Java, with the goal to make use of as many methodologies, patterns and technologies as possible. And maybe learn some Java while undergoing this torture.
 
 ## Used methodologies
 
