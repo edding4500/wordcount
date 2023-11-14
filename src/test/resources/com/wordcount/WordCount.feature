@@ -5,5 +5,5 @@ Feature: Have a word count app
 
   Scenario: User can see the word count of a text
     Given I have a word count app
-    When I read in a file
+    When I read in a file without duplicates
     Then I should see the word count of each word in the file

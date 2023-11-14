@@ -26,7 +26,7 @@ public class WordcountSteps {
     assert wc != null;
   }
 
-  @When("I read in a file")
+  @When("I read in a file without duplicates")
   public void i_enter_a_text() {
     // Write code here that turns the phrase above into concrete actions
     wc.readFile("./src/test/java/com/wordcount/testUnique.txt");
@@ -35,6 +35,10 @@ public class WordcountSteps {
   @Then("I should see the word count of each word in the file")
   public void i_should_see_the_word_count_of_the_text() {
     // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+    assert wc.getUniqueCount().size() == 4;
+    assert wc.getUniqueCount().get("Mainz") == 1;
+    assert wc.getUniqueCount().get("Hamburg") == 1;
+    assert wc.getUniqueCount().get("Reutlingen") == 1;
+    assert wc.getUniqueCount().get("Stuttgart") == 1;
   }
 }
